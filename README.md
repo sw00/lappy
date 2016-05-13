@@ -3,7 +3,8 @@
 Bootstrapping my workstation with the power of [Ansible](https://www.ansible.com/).
 
 ## Gettins Started
-On a factory fresh OSX machine, simply execute `bootstrap.sh`.
+On a factory fresh OSX machine, <s>simply execute `bootstrap.sh`</s> 
+run `curl -sSL https://raw.githubusercontent.com/sw00/lappy/bootstrap.sh | sh`.
 
 ## What it does (so far)
 
