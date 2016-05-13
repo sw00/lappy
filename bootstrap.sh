@@ -9,7 +9,7 @@ xcode-select --install
 brew install git ansible && brew link git ansible
 
 # check out this repo
-git checkout https://github.com/sw00/lappy.git /tmp/lappy
+git clone https://github.com/sw00/lappy.git /tmp/lappy
 
 # provision machine with ansible
 cd /tmp/lappy && \
