@@ -1,0 +1,14 @@
+---
+- name: tap brew-cask
+  homebrew_tap: tap=caskroom/cask
+
+- name: install cask apps
+  homebrew_cask: name={{item}}
+  with_items:
+    - 1password
+    - caffeine
+    - iterm2
+    - google-chrome
+    - macvim
+    - owncloud
+
