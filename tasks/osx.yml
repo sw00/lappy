@@ -1,0 +1,22 @@
+---
+# -------------- Keyboard ---------------------
+- name: repeat keys instead of press-and-hold
+  osx_defaults: 
+    key: ApplePressAndHoldEnabled
+    type: bool
+    value: false
+
+- name: set fastest key repeat rate
+  osx_defaults:
+    key: KeyRepeat
+    type: int
+    value: 0
+
+- name: disable annoying autocorrect
+  osx_defaults: 
+    key: NSAutomaticSpellingCorrectionEnabled
+    type: bool
+    value: false
+
+# - name: map caps lock to ctrl
+#   script: files/caps-to-ctrl.sh

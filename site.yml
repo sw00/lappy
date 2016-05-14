@@ -9,3 +9,7 @@
     - name: Install apps via cask
       include: tasks/apps.yml
 
+    - name: Set OSX defaults
+      include: tasks/osx.yml
+      tags: wip
+
