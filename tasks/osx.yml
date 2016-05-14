@@ -1,5 +1,5 @@
 ---
-# -------------- Keyboard ---------------------
+# -------------- Input Devices ---------------------
 - name: repeat keys instead of press-and-hold
   osx_defaults: 
     key: ApplePressAndHoldEnabled
@@ -12,11 +12,81 @@
     type: int
     value: 0
 
+- name: set delay before keys repeat (ms)
+  osx_defaults:
+    key: InitialKeyRepeat
+    type: int
+    value: 15
+
 - name: disable annoying autocorrect
   osx_defaults: 
     key: NSAutomaticSpellingCorrectionEnabled
     type: bool
     value: false
 
+- name: use standard function keys
+  osx_defaults:
+    key: com.apple.keyboard.fnState
+    type: bool
+    value: true
+
+- name: enable tap to click
+  osx_defaults:
+    key: com.apple.mouse.tapBehavior
+    type: int
+    value: 1
+
 # - name: map caps lock to ctrl
 #   script: files/caps-to-ctrl.sh
+
+# -------------- Dock ---------------------
+- name: automatically hide the dock
+  osx_defaults:
+    domain: com.apple.dock
+    key: autohide
+    type: bool
+    value: true
+
+# TODO: uncomment when https://github.com/ansible/ansible-modules-extras/pull/1944 is in ansible trunk
+# - name: position dock on the left
+#   osx_defaults:
+#     domain: come.apple.dock
+#     key: orientation
+#     type: string
+#     value: left
+
+# - name: only display some apps permanently
+#   osx_defaults:
+#     domain: com.apple.dock
+#     key: persistent-apps
+#     type: array
+#     value: ["Finder", "Chrome", "iTerm2"]
+
+- name: dim hidden apps
+  osx_defaults:
+    domain: com.apple.dock
+    key: showhidden
+    type: bool
+    value: true
+
+- name: enable dashboard on top-left hot corner
+  osx_defaults:
+    domain: com.apple.dock
+    key: wvous-tl-corner
+    type: int
+    value: 7
+
+- name: don't use modifier key for hot corner
+  osx_defaults:
+    domain: com.apple.dock
+    key: wvous-tl-modifier
+    type: int
+    value: 0
+
+# -------------- Other ---------------------
+- name: stop creating .DS_Store files
+  osx_defaults:
+    domain: com.apple.desktopservices
+    key: DSDontWriteNetworkStores
+    type: bool
+    value: false
