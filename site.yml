@@ -11,5 +11,4 @@
 
     - name: Set OSX defaults
       include: tasks/osx.yml
-      tags: wip
 
