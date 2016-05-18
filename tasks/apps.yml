@@ -2,12 +2,16 @@
 - name: tap brew-cask
   homebrew_tap: tap=caskroom/cask
 
+- name: tap alternate versions
+  homebrew_tap: tap=caskroom/versions
+  tags: wip
+
 - name: install cask apps
   homebrew_cask: name={{item}}
   with_items:
     - 1password
     - caffeine
-    - iterm2
+    - iterm2-beta
     - google-chrome
     - macvim
     - owncloud
