@@ -10,7 +10,6 @@
     - base
 
   tasks:
-    - debug: msg={{ PACKAGES }}
     - name: install packages
       include: ./tasks/{{ OS }}_packages.yml
 
