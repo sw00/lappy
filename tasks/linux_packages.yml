@@ -1,8 +1,7 @@
 ---
 - name: install packages
   pacman:
-    name: "{{ item.name }}"
-    update_cache: yes
+    name: "{{ item }}"
     state: present
   with_items: "{{ PACKAGES }}"
 

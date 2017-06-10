@@ -1,7 +1,6 @@
 ---
 APPS:
   - chromium
-  - gvim
   - visual-studio-code
   - dropbox
 

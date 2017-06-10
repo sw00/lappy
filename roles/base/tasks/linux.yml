@@ -1,9 +1,17 @@
 ---
+- name: install yaourt
+  pacman: name=yaourt state=present
+  become: yes
+  when: package_manager == 'pacman'
+
 - name: install rcm
-  pacman: name=rcm update_cache=yes state=present
+  command: yaourt -S --noconfirm rcm 
+  args:
+    creates: /usr/bin/rcup
   when: package_manager == 'pacman'
 
 - name: install zsh
   pacman: name=zsh state=present
+  become: yes
   when: package_manager == 'pacman'
 

@@ -1,7 +1,5 @@
 ---
-- name: install apps
-  pacman:
-    name: "{{ item }}"
-    update_cache: yes
-    state: present
+- name: instlal apps from AUR
+  aur: name={{ item }} tool=yaourt
   with_items: "{{ APPS }}"
+

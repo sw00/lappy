@@ -1,2 +1,4 @@
 ---
 OS: "{{ 'osx' if ansible_system == 'Darwin' else 'linux'}}" 
+package_managers:
+  Archlinux: pacman
