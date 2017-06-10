@@ -1,15 +1,14 @@
-#lappy
+# lappy
 
-Bootstrapping my workstation with the power of [Ansible](https://www.ansible.com/).
+Bootstrapping my workstations with the power of
+[Ansible](https://www.ansible.com/).
 
 ## Getting Started
-On a factory fresh OSX machine, <s>simply execute `bootstrap.sh`</s> 
-run `curl -sSL https://raw.githubusercontent.com/sw00/lappy/bootstrap.sh | sh`.
+On a factory fresh OSX or Arch Linux based machine run `curl
+-sSL https://raw.githubusercontent.com/sw00/lappy/master/bootstrap.sh | sh`.
 
 ## What it does (so far)
 
-1. Installs Xcode Command Line Tools (required by homebrew).
+`bootstrap.sh` will delegate to `linux.sh` or `osx.sh` to install git, ansible
+and then run the playbooks locally.
 
-2. Installs [homebrew](http://brew.sh/) (**WARNING: via curl + sh - for now**)
-
-3. Executes the Ansible playbook on the local machine.
