@@ -1,0 +1,10 @@
+---
+- name: tap thoughtbot homebrew formulae
+  homebrew_tap: tap=thoughtbot/formulae
+
+- name: install rcm
+  homebrew: name=rcm state=present
+
+- name: install zsh
+  homebrew: name=zsh state=present
+

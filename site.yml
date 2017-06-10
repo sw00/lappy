@@ -1,14 +1,19 @@
 ---
 - hosts: localhost
   connection: local
+  vars:
+    OS: "{{ 'osx' if ansible_os_family == 'Darwin' else 'linux' }}"
+  vars_files:
+    - ./vars/{{ ansible_distribution }}.yml
+
+  roles:
+    - base
 
   tasks:
-    - name: Set up terminal and CLI
-      include: tasks/cli.yml
+    - debug: msg={{ PACKAGES }}
+    - name: install packages
+      include: ./tasks/{{ OS }}_packages.yml
 
-    - name: Install apps via cask
-      include: tasks/apps.yml
-
-    - name: Set OSX defaults
-      include: tasks/osx.yml
+    - name: install apps
+      include: ./tasks/{{ OS }}_apps.yml
 

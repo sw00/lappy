@@ -1,0 +1,21 @@
+---
+- name: install dependencies
+  include: "{{ OS }}.yml"
+
+- name: check out dotfiles
+  git:
+    repo: https://github.com/sw00/dotfiles.git
+    dest: "{{ ansible_env.HOME }}/dotfiles"
+    depth: 1
+    update: yes
+
+- name: install dotfiles
+  shell: rcup -d /Users/{{ansible_user_id}}/dotfiles
+  args:
+    chdir: /Users/{{ansible_user_id}}/dotfiles
+
+- name: change default shell to zsh
+  user: 
+    name: "{{ ansible_user_id }}" 
+    shell: "/usr/bin/zsh"
+  become: yes

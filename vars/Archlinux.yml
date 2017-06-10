@@ -1,0 +1,13 @@
+---
+APPS:
+  - chromium
+  - gvim
+  - visual-studio-code
+  - dropbox
+
+PACKAGES:
+  - rcm
+  - zsh
+  - vim
+  - tmux
+

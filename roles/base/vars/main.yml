@@ -1,0 +1,2 @@
+---
+OS: "{{ 'osx' if ansible_system == 'Darwin' else 'linux'}}" 

@@ -1,0 +1,19 @@
+---
+APPS:
+  - 1password
+  - caffeine
+  - iterm2-beta
+  - google-chrome
+  - macvim
+  - gpgtools
+  - dropbox
+
+PACKAGES:
+  - name: rcm
+  - name: zsh
+  - name: vim
+    options: override-system-vi
+  - name: tmux
+  - name: git-crypt
+  - name: ag
+  - name: z

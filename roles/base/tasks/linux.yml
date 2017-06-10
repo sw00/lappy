@@ -1,0 +1,9 @@
+---
+- name: install rcm
+  pacman: name=rcm update_cache=yes state=present
+  when: package_manager == 'pacman'
+
+- name: install zsh
+  pacman: name=zsh state=present
+  when: package_manager == 'pacman'
+
