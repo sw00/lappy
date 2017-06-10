@@ -1,7 +1,8 @@
 ---
 - name: install dependencies
   include: "{{ OS }}.yml"
-  package_manager: "{{ package_managers[ansible_distribution] }}"
+  vars:
+    package_manager: "{{ package_managers[ansible_distribution] }}"
 
 - name: check out dotfiles
   git:
