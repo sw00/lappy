@@ -8,6 +8,5 @@
 - name: install cask apps
   homebrew_cask: 
     name: "{{ item }}"
-    install_options: "{{ item }}"
   with_items: "{{ APPS }}"
 
