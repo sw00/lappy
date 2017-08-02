@@ -17,4 +17,5 @@ PACKAGES:
   - name: tmux
   - name: git-crypt
   - name: fzf
+  - name: ripgrep
   - name: z
