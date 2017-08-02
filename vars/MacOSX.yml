@@ -1,12 +1,13 @@
 ---
 APPS:
-  - 1password
+  - keeweb
   - caffeine
   - iterm2-beta
   - google-chrome
   - macvim
   - gpgtools
   - dropbox
+  - wavebox
 
 PACKAGES:
   - name: rcm
@@ -15,5 +16,5 @@ PACKAGES:
     options: override-system-vi
   - name: tmux
   - name: git-crypt
-  - name: ag
+  - name: fzf
   - name: z
