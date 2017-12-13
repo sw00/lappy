@@ -5,9 +5,8 @@ APPS:
   - iterm2-beta
   - google-chrome
   - macvim
-  - gpgtools
   - dropbox
-  - wavebox
+  - franz
 
 PACKAGES:
   - name: rcm
@@ -16,6 +15,7 @@ PACKAGES:
     options: override-system-vi
   - name: tmux
   - name: git-crypt
+  - name: gpg
   - name: fzf
   - name: ripgrep
   - name: z
