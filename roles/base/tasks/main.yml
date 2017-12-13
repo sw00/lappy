@@ -19,5 +19,5 @@
 - name: change default shell to zsh
   user: 
     name: "{{ ansible_user_id }}" 
-    shell: "/usr/bin/zsh"
+    shell: "{{ '/usr/bin/zsh' if OS != 'osx' else '/bin/zsh' }}"
   become: yes
