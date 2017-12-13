@@ -96,6 +96,22 @@
     type: int
     value: 0
 
+# -------------- Screensaver ---------------------
+
+- name: prompt for password when screensaver activates
+  osx_defaults:
+    domain: com.apple.screensaver
+    key: askForPassword
+    type: int
+    value: 1
+
+- name: immediately activate password prompt when screensaver activates
+  osx_defaults:
+    domain: com.apple.screensaver
+    key: askForPasswordDelay
+    type: float
+    value: 0.0
+
 # -------------- Other ---------------------
 - name: stop creating .DS_Store files
   osx_defaults:
