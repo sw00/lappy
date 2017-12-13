@@ -16,3 +16,7 @@
     - name: install apps
       include: ./tasks/{{ OS }}_apps.yml
 
+    - name: set osx defaults
+      include: ./tasks/osx_defaults.yml
+      when: OS == 'osx'
+

@@ -10,7 +10,7 @@
   osx_defaults:
     key: KeyRepeat
     type: int
-    value: 0
+    value: 1
 
 - name: set delay before keys repeat (ms)
   osx_defaults:
@@ -47,25 +47,38 @@
     type: bool
     value: true
 
-# TODO: uncomment when https://github.com/ansible/ansible-modules-extras/pull/1944 is in ansible trunk
-# - name: position dock on the left
-#   osx_defaults:
-#     domain: come.apple.dock
-#     key: orientation
-#     type: string
-#     value: left
+- name: position dock on the left
+  osx_defaults:
+    domain: com.apple.dock
+    key: orientation
+    type: string
+    value: left
 
-# - name: only display some apps permanently
-#   osx_defaults:
-#     domain: com.apple.dock
-#     key: persistent-apps
-#     type: array
-#     value: ["Finder", "Chrome", "iTerm2"]
+- name: only display some apps permanently
+  osx_defaults:
+    domain: com.apple.dock
+    key: persistent-apps
+    type: array
+    value: ["Finder", "Chrome", "iTerm2"]
 
 - name: dim hidden apps
   osx_defaults:
     domain: com.apple.dock
     key: showhidden
+    type: bool
+    value: true
+
+- name: enable dashboard
+  osx_defaults:
+    domain: com.apple.dashboard
+    key: mcx-disabled
+    type: bool
+    value: false
+
+- name: don't show dashboard as space
+  osx_defaults:
+    domain: com.apple.dashboard
+    key: dashboard-in-overlay
     type: bool
     value: true
 
