@@ -6,7 +6,7 @@ APPS:
   - google-chrome
   - macvim
   - dropbox
-  - franz
+  - rambox
 
 PACKAGES:
   - name: rcm
