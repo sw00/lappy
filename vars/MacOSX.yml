@@ -19,3 +19,4 @@ PACKAGES:
   - name: fzf
   - name: ripgrep
   - name: z
+  - name: reattach-to-user-namespace
